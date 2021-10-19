@@ -1,7 +1,7 @@
 <template>
-  <ul>
+  <div>
     <TodoItem v-for="todo of visibleTodos" :key="todo.id" :todo="todo" />
-  </ul>
+  </div>
 </template>
 <script>
 import TodoItem from "./TodoItem.vue";

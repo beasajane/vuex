@@ -1,7 +1,11 @@
 <template>
   <div>
-    <input type="checkbox" :checked="isAllChecked" @click="toggleAll">
-    <input type="text" v-model.trim="text" @keyup.enter="addTodo">
+    <el-row :gutter="10">
+      <el-col :span="1"><el-checkbox :value="isAllChecked" @change="toggleAll"></el-checkbox></el-col>
+      <el-col :span="15"><el-input size="mini" v-model.trim="text" @keyup.enter.native="addTodo" placeholder="请输入内容"></el-input></el-col>
+    </el-row>
+    <!-- <input type="checkbox" :checked="isAllChecked" @click="toggleAll"> -->
+    <!-- <input type="text" v-model.trim="text" @keyup.enter="addTodo"> -->
   </div>
 </template>
 <script>

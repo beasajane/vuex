@@ -1,5 +1,5 @@
 <template>
-  <button v-if="hasCompleted" @click="clear">Clear completed</button>
+  <el-button v-if="hasCompleted" @click="clear">Clear completed</el-button>
 </template>
 <script>
 import { mapGetters, mapMutations } from 'vuex'
